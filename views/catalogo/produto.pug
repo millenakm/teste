@@ -1,0 +1,48 @@
+extends ./../layout
+
+block content
+	include ./../navbar.pug
+	h2.titulo-pg Detalhes do Produto
+	div.container.produto(data-id=dados.isbn).isbn
+		-if(dados=='error'){
+			h2 Produto não encontrado
+		-}
+		-else{	
+			div.col-md-8.product-left
+				h3.col-md-12= dados.titulo
+				div.price.col-md-6
+					h3.col-md-12 R$ #{parseFloat(dados.valor).toFixed(2).toString().replace('.',',')}
+				div.col-md-6.icons-product
+					div.col-md-12
+						a.wish
+							-if(dados.favorito==false){
+								i.glyphicon.glyphicon-heart-empty
+							-}
+							-else if(dados.favorito==true){
+								i.glyphicon.glyphicon-heart
+							-}
+							br
+							|Lista de desejos
+					div.col-md-12
+						a.cart
+							-if(dados.carrinho==false){
+								i.glyphicon.glyphicon-shopping-cart.cart-empty
+							-}
+							-else if(dados.carrinho==true){
+								i.glyphicon.glyphicon-shopping-cart.cart-full
+							-}
+							br
+							|Adicionar ao carrinho
+
+
+				// h3.col-md-6 R$ #{parseFloat(dados.valor).toFixed(2).toString().replace('.',',')}
+				p.col-md-12= dados.descrição
+			div.col-md-4.product-right
+				img(src="../../images/livros/"+dados.capa+".jpg").col-md-12#img-produto
+				div.col-md-12.descr
+					h3.col-md-12= dados.autor
+					h5.col-md-12 Editora: #{dados.editora}
+					h5.col-md-12 Ano: #{dados.ano}
+					h5.col-md-12 Páginas: #{dados.paginas}
+					h5.col-md-12 Categoria: #{dados.categoria}
+		-}

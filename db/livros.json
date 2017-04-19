@@ -1,0 +1,100 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 422,
+    "items": [{
+        "kind": "books#volume",
+        "id": "YR6NAgAAQBAJ",
+        "etag": "hHMO3+w/jPY",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/YR6NAgAAQBAJ",
+        "volumeInfo": {
+            "title": "Amigas para sempre",
+            "subtitle": "Uma vida inteira de cumplicidade pode ser destruída por um momento de traição?",
+                "authors": [
+                    "Kristin Hannah"
+                ],
+            "publisher": "Editora Arqueiro",
+            "publishedDate": "2014-02-07",
+			"description": "“Uma leitura doce e tocante sobre uma das coisas mais importantes da vida: a verdadeira amizade.” – Elizabeth Buchan, autora de A vingança da mulher de meia-idade Tully Hart tinha 14 anos, era linda, alegre, popular e invejada por todos. O que ninguém poderia imaginar era o sofrimento que ela vivia dentro de casa: nunca conhecera o pai, e a mãe, viciada em drogas costumava desaparecer por longos períodos, deixando a menina aos cuidados da avó. Mas a vida de Tully se transformou quando ela se mudou para a alameda dos Vaga-lumes e conheceu a garota mais legal do mundo. Kate Mularkey era inteligente, compreensiva e tão amorosa que logo fez Tully sentir-se parte de sua família. Ao longo de mais de trinta anos de amizade, uma se tornou o porto seguro da outra. Tully ajudou Kate a descobrir a própria beleza e a encorajou a enfrentar seus medos. Kate, por sua vez, a ensinou a enxergar além das aparências e a fez entender que certos riscos não valem a pena. As duas juraram que seriam amigas para sempre. Essa promessa resistiu ao frenesi dos anos 1970, às reviravoltas políticas das décadas de 1980 e 1990 e às promessas do novo milênio. Até que algo acontece para abalar a confiança entre elas. Será possível perdoar uma traição de sua melhor amiga? Neste livro, Kristin Hanna nos conta uma linda história sobre duas pessoas que sabem tudo a respeito uma da outra – e que por isso mesmo podem tanto ferir quanto salvar.",
+			"industryIdentifiers": [{
+					"type": "ISBN_13",
+					"identifier": "9788580412529"
+				},
+				{
+					"type": "ISBN_10",
+					"identifier": "8580412528"
+				}
+			],
+			"readingModes": {
+				"text": true,
+				"image": true
+			},
+			"pageCount": 448,
+			"printType": "BOOK",
+			"categories": [
+				"Fiction"
+    		],
+			"maturityRating": "NOT_MATURE",
+			"allowAnonLogging": true,
+			"contentVersion": "1.9.9.0.preview.3",
+			"panelizationSummary": {
+				"containsEpubBubbles": false,
+				"containsImageBubbles": false
+    		},
+			"imageLinks": {
+				"smallThumbnail": "http://books.google.com/books/content?id=YR6NAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+				"thumbnail": "http://books.google.com/books/content?id=YR6NAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    		},
+			"language": "pt",
+			"previewLink": "http://books.google.com.br/books?id=YR6NAgAAQBAJ&printsec=frontcover&dq=inpublisher:arqueiro&hl=&cd=1&source=gbs_api",
+			"infoLink": "https://play.google.com/store/books/details?id=YR6NAgAAQBAJ&source=gbs_api",
+			"canonicalVolumeLink": "https://market.android.com/details?id=book-YR6NAgAAQBAJ"
+			},
+			"saleInfo": {
+				"country": "BR",
+				"saleability": "FOR_SALE",
+				"isEbook": true,
+				"listPrice": {
+				"amount": 29.99,
+				"currencyCode": "BRL"
+			},
+			"retailPrice": {
+				"amount": 28.49,
+				"currencyCode": "BRL"
+  			},
+			"buyLink": "https://play.google.com/store/books/details?id=YR6NAgAAQBAJ&rdid=book-YR6NAgAAQBAJ&rdot=1&source=gbs_api",
+			"offers": [{
+				"finskyOfferType": 1,
+				"listPrice": {
+					"amountInMicros": 2.999E7,
+					"currencyCode": "BRL"
+				},
+				"retailPrice": {
+					"amountInMicros": 2.849E7,
+					"currencyCode": "BRL"
+				},
+				"giftable": true
+			}]
+  		},
+   		"accessInfo": {
+			"country": "BR",
+			"viewability": "PARTIAL",
+			"embeddable": true,
+			"publicDomain": false,
+			"textToSpeechPermission": "ALLOWED",
+			"epub": {
+			"isAvailable": true,
+			"acsTokenLink": "http://books.google.com.br/books/download/Amigas_para_sempre-sample-epub.acsm?id=YR6NAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    	},
+		"pdf": {
+			"isAvailable": true,
+			"acsTokenLink": "http://books.google.com.br/books/download/Amigas_para_sempre-sample-pdf.acsm?id=YR6NAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+		},
+		"webReaderLink": "http://books.google.com.br/books/reader?id=YR6NAgAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+			"accessViewStatus": "SAMPLE",
+			"quoteSharingAllowed": false
+		},
+	"searchInfo": {
+    "textSnippet": "Kate, por sua vez, a ensinou a enxergar além das aparências e a fez entender que certos riscos não valem a pena. As duas juraram que seriam amigas para sempre."
+   }
+  }]
+ }

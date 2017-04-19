@@ -1,0 +1,13 @@
+extends ./../layout
+
+block content
+	-var categorias = true
+	include ./../navbar.pug
+	div.container#desejos
+		h2.titulo-pg Lista de Desejos
+		-for(var i=0; i<dados.length; i++){
+			-if(dados[i].favorito == true){
+				include livros.pug
+			-}
+		-}
+		h2#msg
