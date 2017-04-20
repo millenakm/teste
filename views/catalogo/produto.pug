@@ -36,6 +36,7 @@ block content
 				h5.col-md-12 #{data.volumeInfo.publisher}
 				h5.col-md-12 Publicação: #{data.volumeInfo.publishedDate}
 				h5.col-md-12 Páginas: #{data.volumeInfo.pageCount}
+				h5.col-md-12 ISBN: #{data.volumeInfo.industryIdentifiers[0].identifier}
 		div#view.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			div.modal-dialog.modal-lg(role='document')
 				div.modal-content
@@ -45,5 +46,5 @@ block content
 						h3 Prévia 
 							strong   #{data.volumeInfo.title}
 					div.modal-body
-						div#viewerCanvas.book-view.col-md-12(style="height: 480px", data-isbn=data.volumeInfo.industryIdentifiers[0].identifier)
+						div#viewerCanvas.book-view(style="height: 480px", data-isbn=data.volumeInfo.industryIdentifiers[0].identifier)
 	
