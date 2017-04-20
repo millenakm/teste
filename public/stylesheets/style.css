@@ -157,6 +157,7 @@
 }
 .grid .effect-terry {
   background: #fff;
+  min-height: 340px;
 }
 .grid .effect-terry:hover figcaption p a {
   -webkit-transform: translate3d(0, 0, 0);
