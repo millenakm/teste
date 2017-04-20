@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var file = require('./../controller/file');
 // jquery
 var jsdom = require('jsdom').jsdom;
 var document = jsdom('<html></html>', {});
@@ -12,20 +11,20 @@ var categorias = [];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	file.read(function(data){
-		var vendidos = [];
-		$.each(data.produtos, function(index, value) {
-		    if ($.inArray(value.categoria, categorias)==-1) {
-		        categorias.push(value.categoria, value.capa);
-		    }
-		    if(value.vendidos>0){
-		    	vendidos.push(value.titulo);
-		    }	
-		});
-		console.log(vendidos);
-  		res.render('index', {title: "Bookstore", categorias: categorias, populares: vendidos});
+	// file.read(function(data){
+	// 	var vendidos = [];
+	// 	$.each(data.produtos, function(index, value) {
+	// 	    if ($.inArray(value.categoria, categorias)==-1) {
+	// 	        categorias.push(value.categoria, value.capa);
+	// 	    }
+	// 	    if(value.vendidos>0){
+	// 	    	vendidos.push(value.titulo);
+	// 	    }	
+	// 	});
+	// 	console.log(vendidos);
+  		res.render('index', {title: "Bookstore"});
 		res.end();
-	});
+	// });
 
 });
 

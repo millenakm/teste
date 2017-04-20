@@ -17,30 +17,14 @@ nav.navig
 					li#logoNav
 						img(src="../../images/logo-white.png", height="50px")
 				ul.nav.navbar-nav.navbar-right
-					li.icon
-						a(href="/catalogo/desejo")
-							span.glyphicon.glyphicon-heart.heart-navbar
-							span.badge.badge-nav#numberWish 0
-					li.icon
-						a#cartBox
-							span.glyphicon.glyphicon-shopping-cart
-							span.badge.badge-nav#numberCart 0
-					li.icon
-						a
-							span.glyphicon.glyphicon-bell
-							span.badge.badge-nav#numberBell 0
+					li
+						-if(categorias==true){
+							include filtro.pug
+						-}
 					li
 						a#open-search
 							span.glyphicon.glyphicon-search
-					-if(!carrinho){
-						include carrinho.pug
-					-}
 					
--if(categorias==true){
-	div.filter-icon
-		span.glyphicon.glyphicon-menu-up
-		span.glyphicon.glyphicon-menu-up
-	include filtro.pug
--}
+
 
 include search.pug

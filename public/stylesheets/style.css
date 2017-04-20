@@ -69,6 +69,7 @@
   background-color: #111;
 }
 .grid {
+  min-height: 350px;
   position: relative;
   list-style: none;
   text-align: center;
@@ -87,6 +88,13 @@
   height: auto;
   background: #fff;
   text-align: center;
+}
+.grid figure:hover {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  box-shadow: 0px 11px 35px 0 black;
+  moz-box-shadow: 0px 11px 35px 0 black;
+  webikt-box-shadow: 0px 11px 35px 0 black;
 }
 .grid figure img {
   position: relative;
@@ -173,9 +181,9 @@
   transform: translate3d(0, 0, 0);
 }
 .grid .effect-terry:hover img {
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  opacity: 0.8;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  opacity: 1.5;
 }
 .grid .effect-terry figcaption {
   padding: 1.5em;
@@ -232,17 +240,17 @@
   margin-left: 100px;
   margin-bottom: 35%;
   margin-top: 5%;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .grid .effect-terry .infoCatalogo .tagsNome,
 .grid .effect-terry .infoCatalogo .tagsPreco {
   padding: 0.8em;
-  padding-left: 20px;
+  padding-left: 18px;
   text-align: left;
   line-height: 1;
 }
 .grid .effect-terry .infoCatalogo .tagsPreco {
-  font-size: 22px;
+  font-size: 18px;
   color: aqua;
 }
 html,
@@ -423,6 +431,21 @@ body .navig-top {
   padding: 5%;
   font-weight: 600;
 }
+.produto .product-left .preview h3 {
+  background-color: #00bfa5;
+  color: white;
+  margin-top: 5%;
+  border-radius: 2px;
+  padding: 5%;
+  font-weight: 600;
+  box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.7);
+  moz-box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.7);
+  webikt-box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.7);
+}
+.produto .product-left .preview h3:hover {
+  cursor: pointer;
+  background-color: #00ab93;
+}
 .produto .product-left .icons-product {
   text-align: center;
 }
@@ -452,6 +475,8 @@ body .navig-top {
 }
 .produto .product-left p {
   text-align: justify;
+  margin-top: 3%;
+  font-size: small;
 }
 .produto .product-right {
   padding: 0;
@@ -468,6 +493,9 @@ body .navig-top {
 .produto .product-right .descr h5 {
   margin: 0;
   padding: 2%;
+}
+.produto .modal-body {
+  height: 500px;
 }
 .box-book:hover,
 .cart:hover {

@@ -108,6 +108,7 @@
 
 // grid livros
 .grid {
+	min-height: 350px;
 	position: relative;
 	list-style: none;
 	text-align: center;
@@ -124,6 +125,12 @@
 		height: auto;
 		background: #fff;
 		text-align: center;
+
+		&:hover{
+			transition: 0.2s;
+			-webkit-transition:  0.2s;
+			.shadow(0px, 11px, 35px, 0, black); 
+		}
 
 		img{
 			position: relative;
@@ -181,6 +188,7 @@
 		&:hover{
 
 			figcaption{
+
 				p{ 
 					a {
 						-webkit-transform: translate3d(0,0,0);
@@ -209,10 +217,9 @@
 			}
 
 			img {
-				transition: 0.5s;
-			    -webkit-transition:  0.5s;
-				opacity: 0.8;
-				// margin-left: 5px;
+				transition: 0.2s;
+			    -webkit-transition:  0.2s;
+				opacity: 1.5;
 			}
 		}
 
@@ -276,17 +283,17 @@
 			margin-left: 100px;
 			margin-bottom: 35%;
 			margin-top: 5%;
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 		.infoCatalogo{
 			.tagsNome, .tagsPreco{
 				padding: 0.8em;
-				padding-left: 20px;
+				padding-left: 18px;
 				text-align: left;
 				line-height: 1;
 			}
 			.tagsPreco{
-				font-size: 22px;
+				font-size: 18px;
 				color: aqua;
 			}
 		}
@@ -493,13 +500,28 @@ body {
 		.price{
 			h3{
 				background-color: transparent;
-				background-color: transparent;
 				color: black;
 				margin-top: 5%;
 				border: 2px solid @resultColor;
 				border-radius: 2px;
 				padding: 5%;
 				font-weight: 600;
+			}
+		}
+		.preview{
+			h3{
+				background-color: @resultColor;
+				color: white;
+				margin-top: 5%;
+				border-radius: 2px;
+				padding: 5%;
+				font-weight: 600;
+				.shadow(0, 8px, 9px, -5px, rgba(0, 0, 0, 0.7));
+
+				&:hover{
+					cursor: pointer;
+					background-color: darken(@resultColor, 4%)
+				}
 			}
 		}
 
@@ -536,6 +558,8 @@ body {
 
 		p{
 			text-align: justify;
+			margin-top: 3%;
+    		font-size: small;
 		}
 	}
 
@@ -575,6 +599,9 @@ body {
 				padding: 2%;
 			}
 		}
+	}
+	.modal-body{
+		height: 500px;
 	}
 }
 
