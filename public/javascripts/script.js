@@ -158,7 +158,9 @@ function catalogo(editora){
 	if(editora=="all"){
 		$(".selectpicker > option").each(function(){
 			editora = $(this).val();
-			createCatalogo(editora);
+			if(editora!="all"){
+				createCatalogo(editora);
+			}
 			
 		});
 	}else{
@@ -171,7 +173,6 @@ function createCatalogo(editora){
 	var api='https://www.googleapis.com/books/v1/volumes?q=inpublisher:';
 	var key = '&%20key%20=%20AIzaSyD0oBpbiiHTaxdpEjo79ReqLNZlry1CYcs';
 	var quantidade = '&maxResults=20';
-	
 	$.get(api+editora+quantidade+key, function(data){
 		for(i in data.items){
 			var valor=data.items[i].saleInfo.listPrice;
@@ -194,7 +195,6 @@ function createCatalogo(editora){
 }
 
 function viewBook(){
-	google.books.load();
 	function initialize() {
 		var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
 		var isbn = $("#viewerCanvas").attr("data-isbn");
@@ -204,6 +204,7 @@ function viewBook(){
 }
 
 $(document).ready(function(){
+	google.books.load();
 	catalogo($('.selectpicker').val());
 	styles(); 
 	actions();
