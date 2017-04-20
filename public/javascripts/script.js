@@ -223,6 +223,15 @@ function catalogo(editora){
 
 }
 
+function viewBook(){
+	google.books.load();
+	function initialize() {
+		var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
+		var isbn = $("#viewerCanvas").attr("data-isbn");
+		viewer.load('ISBN:'+isbn);
+	}
+	google.books.setOnLoadCallback(initialize);
+}
 
 $(document).ready(function(){
 	createFilter();
@@ -230,4 +239,5 @@ $(document).ready(function(){
 	styles(); 
 	actions();
 	searchJson();
+	viewBook();
 });

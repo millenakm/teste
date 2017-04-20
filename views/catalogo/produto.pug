@@ -2,15 +2,6 @@ extends ./../layout
 
 block content
 	include ./../navbar.pug
-	script(type="text/javascript", src="https://www.google.com/books/jsapi.js")
-	script
-		|google.books.load();
-		|function initialize() {
-		|	var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-		|	var isbn = $("#viewerCanvas").data("isbn");
-		|	viewer.load('ISBN:'+isbn);
-		|}
-		|google.books.setOnLoadCallback(initialize);
 	h2.titulo-pg Detalhes do Produto
 	div.container.produto
 		div.col-md-9.product-left
