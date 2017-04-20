@@ -153,27 +153,44 @@ function actions(){
 }
 
 function catalogo(editora){
+	
+	$("#catalogo").html("");
+	if(editora=="all"){
+		$(".selectpicker > option").each(function(){
+			editora = $(this).val();
+			createCatalogo(editora);
+			
+		});
+	}else{
+		createCatalogo(editora);
+	}
+
+}
+
+function createCatalogo(editora){
 	var api='https://www.googleapis.com/books/v1/volumes?q=inpublisher:';
-	// var editora2=["intrinseca","rocco","arqueiro"];
 	var key = '&%20key%20=%20AIzaSyD0oBpbiiHTaxdpEjo79ReqLNZlry1CYcs';
 	var quantidade = '&maxResults=20';
-	$("#catalogo").html("");
-		$.get(api+editora+quantidade+key, function(data){
-			for(i in data.items){
-				var valor=data.items[i].saleInfo.listPrice;
-				if(valor==undefined){
-					valor="Produto Esgotado"
-				}else{
-					valor="R$ "+data.items[i].saleInfo.listPrice.amount.toFixed(2).toString().replace('.',',');
-				}
-				$("#catalogo").append('<div class="grid col-md-4 col-lg-4 col-sm-6 isbn"><a href="catalogo/produto/'+data.items[i].id+'"><figure class="effect-terry"><img src="'
-					+data.items[i].volumeInfo.imageLinks.thumbnail+'"><div class="infoCatalogo"><h2 class="tagsNome col-md-7">'
-					+data.items[i].volumeInfo.title+'<br><span>'+data.items[i].volumeInfo.authors[0]
-					+'</span></h2><h2 class="tagsPreco col-md-5">'+valor+
-					'</div></figure></a></div>');
+	
+	$.get(api+editora+quantidade+key, function(data){
+		for(i in data.items){
+			var valor=data.items[i].saleInfo.listPrice;
+			var img = data.items[i].volumeInfo.imageLinks;
+			if(img==undefined){
+				break;
 			}
-		});
-
+			if(valor==undefined){
+				valor="Produto Esgotado"
+			}else{
+				valor="R$ "+data.items[i].saleInfo.listPrice.amount.toFixed(2).toString().replace('.',',');
+			}
+			$("#catalogo").append('<div class="grid col-md-4 col-lg-4 col-sm-6 isbn"><a href="catalogo/produto/'+data.items[i].id+'"><figure class="effect-terry"><img src="'
+				+data.items[i].volumeInfo.imageLinks.thumbnail+'"><div class="infoCatalogo"><h2 class="tagsNome col-md-7">'
+				+data.items[i].volumeInfo.title+'<br><span>'+data.items[i].volumeInfo.authors[0]
+				+'</span></h2><h2 class="tagsPreco col-md-5">'+valor+
+				'</div></figure></a></div>');
+		}
+	});
 }
 
 function viewBook(){
