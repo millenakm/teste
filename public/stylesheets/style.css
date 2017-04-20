@@ -473,10 +473,22 @@ body .navig-top {
   text-align: center;
   padding: 2.5%;
 }
+.produto .product-left h3 span {
+  font-size: small;
+  color: #555;
+}
 .produto .product-left p {
   text-align: justify;
-  margin-top: 3%;
+  margin-top: 1%;
   font-size: small;
+}
+.produto .product-left .descTitle {
+  background-color: transparent;
+  margin: 0;
+  margin-top: 3%;
+  color: #00bfa5;
+  font-family: 'Baloo Bhaina', cursive;
+  text-align: left;
 }
 .produto .product-right {
   padding: 0;
@@ -496,6 +508,9 @@ body .navig-top {
 }
 .produto .modal-body {
   height: 500px;
+}
+#view {
+  overflow-y: hidden;
 }
 .box-book:hover,
 .cart:hover {

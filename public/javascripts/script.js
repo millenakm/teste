@@ -223,6 +223,7 @@ function catalogo(editora){
 
 }
 
+
 $(document).ready(function(){
 	createFilter();
 	catalogo($('.selectpicker').val());
