@@ -18,7 +18,6 @@ function styles(){
 	$("body").fadeIn(500);
 	onScroll();
 	carousel();
-	filterController();
 }
 // Muda caracteristicas conforme a scrollbar
 function onScroll(){
@@ -132,50 +131,7 @@ function painelResult(elem){
 }
 
 
-/*************** FILTER ***************/
 
-// cria o filtro
-function createFilter(){
-	var editoras = ["Sextante","Arqueiro","Intrinseca"];
-
-		for(i in editoras){
-			editoras.sort();
-			$("#select-categ").append('<option value="'+editoras[i]+'">'+editoras[i]+'</option>');
-		}
-
-}
-
-// icone do filtro
-function filterController(){
-	var countEffect=0;
-	$('.filter-icon').click(function(){
-		countEffect++;
-		filterEffect();
-		$(this).css({bottom: '60px'});
-		$('.navig-filter').css({display:'block'});
-		if(	countEffect==2){
-			countEffect=0;
-			$(this).css({bottom: '5%'});
-			$('.navig-filter').css({display:'none'});
-			filterEffect();
-		}
-	});
-}
-// efeito do icone
-function filterEffect(){
-	$('.filter-icon > span').each(function(){
-		$(this).rotate(180,{
-			duration: 250
-		});
-	});
-}
-
-
-
-// vai para a página do produto clicado
-function productPage(parameters){
-	window.location=(product+parameters);
-}
 // actions style
 function actionStyle(){
 	window.onscroll = function() {
@@ -191,9 +147,6 @@ function actionStyle(){
 // ações dos botoes/inputs
 function actions(){
 	actionStyle();
-	$('.box-book').on('click', function(){
-		productPage($(this).parents('.isbn').data('id'));
-	});
 	$(".selectpicker").change(function(){
 		catalogo($(this).val());
 	});
@@ -234,7 +187,6 @@ function viewBook(){
 }
 
 $(document).ready(function(){
-	createFilter();
 	catalogo($('.selectpicker').val());
 	styles(); 
 	actions();
