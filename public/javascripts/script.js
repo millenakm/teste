@@ -150,6 +150,9 @@ function actions(){
 	$(".selectpicker").change(function(){
 		catalogo($(this).val());
 	});
+	$(".preview").click(function(){
+		initialize();
+	})
 }
 
 function catalogo(editora){
@@ -194,20 +197,17 @@ function createCatalogo(editora){
 	});
 }
 
-function viewBook(){
-	function initialize() {
-		var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-		var isbn = $("#viewerCanvas").attr("data-isbn");
-		viewer.load('ISBN:'+isbn);
-	}
-	google.books.setOnLoadCallback(initialize);
+function initialize() {
+	var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
+	var isbn = $("#viewerCanvas").attr("data-isbn");
+	viewer.load('ISBN:'+isbn);
 }
+
 
 $(document).ready(function(){
 	google.books.load();
+	actions();
 	catalogo($('.selectpicker').val());
 	styles(); 
-	actions();
 	searchJson();
-	viewBook();
 });
